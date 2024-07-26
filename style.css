@@ -727,4 +727,7 @@ background-color: var(--ocean);
     .team-card-item {
         width: calc((100% - 48px) / 1);
     }
+    .products-item {
+        width: calc((100% - 32px) / 1);
+    }
 }
