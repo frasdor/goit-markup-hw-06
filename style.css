@@ -708,17 +708,14 @@ background-color: var(--ocean);
 .menu-mobile {
     width: 320px;
     height: 640px;
-    /* top: -2319px;
-    left: -8988px; */
     gap: 0px;
-    opacity: 0px;
     background-color: lime;
     /* background-color: var(--white); */
     position: relative;
     display:flex;
     flex-direction: column;
     align-items: center;
-    padding: 24px, 0;
+    padding: 24px 0;
     box-sizing: border-box;
     /* display: none; */
 }
@@ -783,6 +780,35 @@ background-color: var(--ocean);
 }
 
 
+.hamburger {
+    --width: 16.8px;
+    --height: 2.4px;
+    --bg-color: #2F2F37;
+    --spacing: 3.6px;
+
+    cursor: pointer;
+    width: var(--width);
+    height: var(--height);
+    background-color: var(--bg-color) ;
+    position: relative;
+    display: none;
+}
+.hamburger::after,
+.hamburger::before {
+    content: "";
+    width: var(--width);
+    height: var(--height);
+    background-color: var(--bg-color);
+    position: absolute;
+}
+.hamburger::before {
+    top: calc(-1 * var(--spacing));
+}
+.hamburger::after {
+    top: var(---spacing);
+
+}
+
  /************tablet**************/
 
  @media (min-width: 768px) and (max-width: 1157px) {
@@ -793,8 +819,11 @@ background-color: var(--ocean);
         display: none;
     }
     .team-card-item {
-        width: calc((100% - 24px) / 2);
+        width: calc((100% - 216px) / 2);
         /* padding: 0 108px; */
+    }
+    .team-card-list{
+        justify-content: center;
     }
     .products-item {
         width: calc((100% - 24px) / 2);
@@ -830,13 +859,28 @@ background-color: var(--ocean);
     color: var(--navy-blue);
     }    
 
-    /* .component {
+    .component {
         display: flex;
         flex-direction: column;
+        align-items: baseline;
         flex-wrap: wrap;
         flex-basis: calc((100% - 24px)/2);
-    } */
-     
+    }
+     .contacts {
+        font-size: 16px;
+        line-height: 150%;
+        letter-spacing: 0.02em;
+        color: var(--slate);
+        display: flex;
+        gap: 12px;
+        margin-left: 121px;
+        flex-direction: column;
+     }
+     .link{
+        padding: 0;
+        cursor: pointer;
+     }
+    
 }
 
 /************mobile***********/
@@ -859,6 +903,7 @@ background-color: var(--ocean);
    .feature-list {
         flex-direction: column; 
         align-items: center; 
+        gap:72px;
     }
     .feature-title {
     text-align: center;
@@ -869,5 +914,32 @@ background-color: var(--ocean);
     }
     .menu-mobile{
         display: block;
+    }
+    h1 {
+        padding: 16px 0;
+    }
+    .navigation, .contacts {
+        display:none;
+    }
+    .hamburger {
+        display: block;}
+    
+    .hero-image-text { 
+        width: 216px;
+        display: flex;
+        place-content: center;
+    }
+    .hero-image{
+        padding: 72px 0;
+    }
+    .card-image {
+        width: 288px;
+        height: 280px;
+    }
+    .subscribe {
+        flex-direction: column;
+    }
+    .products-list {
+        justify-content: center;
     }
 }
