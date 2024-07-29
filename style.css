@@ -63,7 +63,9 @@ body{
     display: flex;
     gap: 40px;
 }
-
+address {
+    font-style: normal;
+}
 .link {
     /* color: var(--navy-blue); */
     cursor: pointer;
@@ -701,33 +703,171 @@ background-color: var(--ocean);
     text-align: left;
 
 }
-/* @media (max-width: 1158px) 
-@media (max-width: 768px) */
-/* @media (max-width: 320px) {
-        .team-card-list {
-            width: calc((100% - 72px) / 1);
-        }
+
+/************menu-mobile***********/
+.menu-mobile {
+    width: 320px;
+    height: 640px;
+    /* top: -2319px;
+    left: -8988px; */
+    gap: 0px;
+    opacity: 0px;
+    background-color: lime;
+    /* background-color: var(--white); */
+    position: relative;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 24px, 0;
+    box-sizing: border-box;
+    /* display: none; */
 }
-@media (max-width: 768px) {
-    .team-card-item {
-        width: calc((100% - 72px) / 2);
-        
-    }
-} */
-@media (max-width: 768px) {
+
+.close-ellipse-mobile {
+    background-color: var(--cornflower);
+    width:24px;
+    height:24px;
+    border-radius:50%;
+    gap: 0px;
+    opacity: 0px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #0000001A;
+    cursor: pointer;
+    position:absolute;
+    top: 24px;
+    left: 272px;
+}
+
+.close-ellipse-mobile:hover{
+    background-color: var(--ocean);
+}
+.menu-nav-mobile {
+    display: flex;
+    flex-direction: column;
+    gap:40px;
+    margin-top: 72px;
+    text-decoration: none;
+    padding-left: 16px;
+}
+
+.link-mobile {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 40px;
+    letter-spacing: 0.02em;
+    text-align: left;
+    color: var(--navy-blue);
+    cursor: pointer;   
+}
+
+.link-mobile:hover {
+    color:var(--ocean);
+    cursor: pointer;
+}
+.contacts-mobile {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    margin-top: 168px;
+}
+.social-mobile {
+    margin: 48px 16px 40px 16px;
+}
+.social-links-mobile {
+    display:flex;
+    gap: 40px;
+    padding-top: 8px;
+    justify-content: center;
+}
+
+
+ /************tablet**************/
+
+ @media (min-width: 768px) and (max-width: 1157px) {
     .container {
         width: 768px; /* Szerokość dla tablet */
     }
-}
-
-@media (max-width: 320px) {
-    .container {
-        width: 320px;
+    .menu-mobile{
+        display: none;
     }
     .team-card-item {
+        width: calc((100% - 24px) / 2);
+        /* padding: 0 108px; */
+    }
+    .products-item {
+        width: calc((100% - 24px) / 2);
+        /* padding: 0 16px; */
+    }
+    .rectangle {
+        display: none;
+    }
+ 
+     .feature-list {
+        margin:0;
+        padding:0;
+        list-style-type: none; 
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 24px;
+        
+    }
+    .feature-item {
+        flex-basis: calc(( 100% - 24px ) / 2);
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .feature-title {
+    margin-bottom: 8px;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 40px;
+    letter-spacing: 0.02em;
+    text-align: left;
+    color: var(--navy-blue);
+    }    
+
+    /* .component {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        flex-basis: calc((100% - 24px)/2);
+    } */
+     
+}
+
+/************mobile***********/
+/* Mobile devices (320px - 767px) */
+@media (min-width: 320px) and (max-width: 767px) {
+   .container {
+        width: 320px;
+    }
+   .team-card-item {
         width: calc((100% - 48px) / 1);
+        /* padding: 0 28px */
     }
     .products-item {
         width: calc((100% - 32px) / 1);
+        /* padding: 0 16px */
+    }
+   .rectangle {
+        display: none;
+    }
+   .feature-list {
+        flex-direction: column; 
+        align-items: center; 
+    }
+    .feature-title {
+    text-align: center;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 40px;
+    letter-spacing: 0.02em;
+    }
+    .menu-mobile{
+        display: block;
     }
 }
