@@ -1,4 +1,6 @@
-* {
+*,
+*::before,
+*::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -747,6 +749,7 @@ background-color: var(--ocean);
     margin-top: 72px;
     text-decoration: none;
     padding-left: 16px;
+    list-style-type: none;
 }
 
 .link-mobile {
@@ -914,6 +917,7 @@ background-color: var(--ocean);
     }
     .menu-mobile{
         display: block;
+        list-style-type: none;
     }
     h1 {
         padding: 16px 0;
