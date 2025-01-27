@@ -557,8 +557,6 @@ textarea{
     width:24px;
     height:24px;
     border-radius:50%;
-    gap: 0px;
-    opacity: 0px;
     display:flex;
     justify-content: center;
     align-items: center;
